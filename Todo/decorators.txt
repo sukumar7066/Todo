@@ -1,0 +1,19 @@
+
+
+def Swap(fn):
+    def wrapper(a,b):
+        if(a<b):
+            a,b=b,a
+        else:
+            return fn(a,b)
+    return wrapper
+
+
+
+
+
+
+@Swap
+def Sub(a,b)
+  return a-b
+
