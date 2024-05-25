@@ -8,12 +8,12 @@ class Register(forms.ModelForm):
         model= User
         fields= ['username',"first_name","last_name","email","password"]
         widgets={
-            'username':forms.TextInput(attrs={'class':'form-control','placeholder':'enter the username'}),
+            # 'username':forms.TextInput(attrs={'class':'form-control','placeholder':'enter the username'}),
             'first_name':forms.TextInput(attrs={'class':'form-control','placeholder':'enter the first_name'}),
             'last_name':forms.TextInput(attrs={'class':'form-control','placeholder':'enter the last_name'}),
             'email':forms.EmailInput(attrs={'class':'form-control','placeholder':'enter the email'}),
-            'password':forms.PasswordInput(attrs={'class':'form-control','placeholder':'enter the password'}),
-            
+            # 'password':forms.PasswordInput(attrs={'class':'form-control','placeholder':'enter the password'}),
+            # change_password
         }
         
 

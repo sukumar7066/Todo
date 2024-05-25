@@ -13,6 +13,7 @@ class Taskmodel(models.Model):
 
     completed=models.BooleanField(default=False)
 
+
     
 
 

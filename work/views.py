@@ -77,17 +77,29 @@ class Update_user(View):
         data=User.objects.get(id=id)
 
         form=Register(instance=data)
-
+        
         return render(request,"register.html",{"form":form})
     
     def post(self,request,**kwargs):
 
         id=kwargs.get("pk")
+
         data=User.objects.get(id=id)
+
         form=Register(request.POST,instance=data)
+
         if form.is_valid():
-            User.objects.create_user(**form.cleaned_data)
-            return redirect("signin")
+
+            form.save()
+        return redirect("signin")
+
+        
+    
+  
+# git init
+
+# git add .
+
 
 
 
@@ -209,6 +221,8 @@ class User_del(View):
         User.objects.get(id=id).delete()
 
         return redirect("Home")
+    
+
 
 
     
